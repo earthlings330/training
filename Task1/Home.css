@@ -111,8 +111,7 @@ filter:none;}
         justify-content: center;
         align-items: center;
     }
-    .card{
-           .card{
+     .card{
         margin: 30px;
         width: 50vw;
         height: 60vhh;
@@ -121,7 +120,6 @@ filter:none;}
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
         transition: all ease-out 250ms;
         border-radius: 5px;
-    }
     }
   
 }
