@@ -49,7 +49,6 @@ header{
     border-radius: 5px;
     grid-area: haeder;
     height: 10vh;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
@@ -102,7 +101,7 @@ filter:none;}
         display: none;
     }
     #main{
-        background-color: rebeccapurple;
+        background-color: lightgray;
         height: 88.5vh;
         overflow: auto;
         grid-area: main;
@@ -111,7 +110,7 @@ filter:none;}
         justify-content: center;
         align-items: center;
     }
-     .card{
+    .card{
         margin: 30px;
         width: 50vw;
         height: 60vhh;
