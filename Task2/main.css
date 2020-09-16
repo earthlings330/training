@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* INDEX  */
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid black;
+  box-shadow:0 5px 5px black;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 2px solid gainsboro;
+    box-shadow: 0 2px 3px black;
+    color:#0ba360;
+}
+#input_name{
+    position: relative;
+    width: 80%;
+    height: 2rem;
+    margin: 20% auto 10px auto;
+}
+#input_name #name{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:black;
+    border:2px solid  gray;
+    border-radius: 3px;
+    padding-left:3px;
+    font-size: 14px;
+}
+
+#btn{
+position: relative;
+width: 80%;
+height: 2rem;
+font-size: 14px;
+margin: 0 auto 10px 30px;
+cursor: pointer;
+}
+#input_name label{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 0 5px;
+    font-size: 18px;
+    transition: 400ms ease-out;
+    color:gray;
+}
+#input_name #name:focus,
+#input_name #name:valid{
+    border: 3px solid green;
+    border-radius: 2px;
+    background:transparent;
+}
+#input_name #name:focus + label,
+#input_name #name:valid + label
+{
+   background-color: white;
+    top: -10px;
+    left: 5px;
+    color:green;
+    font-size: 16px;
+}
+
+
+
+

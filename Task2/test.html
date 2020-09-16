@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="main">
+    </ul>
+    <script>
+        const mainDivId = 'card'
+        const srcImgMale = "images/male.jpg"
+        const srcImgFemale = "images/male.jpg"
+        const altValue = "my_card"
+        const className = "img"
+        const childClassName = "body_card"
+        const size = localStorage.length
+        const storege = localStorage
+        const names =[]
+        let count=0
+        for(name in storege){
+            if(count!=size){
+                names.push(localStorage.getItem(name))
+                count++
+            }else{
+                break
+            }
+        }
+    for(var i =0;i<size;i++){
+        createDivs("div",i)
+        addElement("main","li","li",names[i])
+        
+    }
+    for(var z= 0;z<size;z++){
+    createImgs(mainDivId,"img",altValue,srcImgMale,z)
+    createChildDivs(mainDivId, childClassName ,z)
+    createContentForChildDivs(childClassName+z,"h1",names[z],z)
+    console.log(z)
+    }
+
+    function createDivs(elementTag, divNumber){
+        const newElement = document.createElement(elementTag)
+        newElement.setAttribute('class',mainDivId)
+        newElement.setAttribute('id',mainDivId+divNumber)
+        document.body.appendChild(newElement)
+    }
+
+    function createImgs(parentId,elementClass , altValue , srcValue,divNumber){
+        const parent = document.getElementById(parentId+divNumber)
+        const newElement = document.createElement("img")
+        newElement.setAttribute('class',elementClass)
+        newElement.setAttribute('alt',altValue)
+        newElement.setAttribute('src',srcValue)
+        parent.appendChild(newElement)
+
+    }
+
+    function createChildDivs(parentId, elementClass ,divNumber){
+        const parent = document.getElementById(parentId+divNumber)
+        const newElement = document.createElement("div")
+        newElement.setAttribute('class',elementClass)
+        newElement.setAttribute('id',elementClass+divNumber)
+        parent.appendChild(newElement)
+    }
+
+
+    function createContentForChildDivs(parentId,elementTag,html,divNumber){
+        const parent = document.getElementById(parentId)
+        const newElement = document.createElement(elementTag)
+        newElement.innerHTML = html
+        parent.appendChild(newElement)
+    
+    }
+  
+    function addElement(parentId, elementTag, elementId, html) {
+    // Adds an element to the document
+    const p = document.getElementById(parentId);
+    const newElement = document.createElement(elementTag);
+    newElement.setAttribute('id', elementId);
+    newElement.innerHTML = html;
+    p.appendChild(newElement);
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Submit Form</h1>
+        <form action="Home.html" onsubmit="saveData()">
+        <div id="input_name">
+            <input type="text" id="name" required="" name="name">
+            <label>name</label>
+        </div>
+        <button type="submit" id="btn" >submit</button>
+       
+    </form>
+    </div>
+    <script>
+        function saveData(){
+        const random_number = Math.random()*9999
+        var name = document.getElementById("name");
+        var key ="name"+random_number
+        localStorage.setItem(key,name.value)
+    }
+ 
+   
+    </script>
+</body>
+</html>
